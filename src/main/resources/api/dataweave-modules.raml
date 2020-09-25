@@ -1,0 +1,15 @@
+#%RAML 1.0
+title: Using DataWeave Modules
+description: This sample Mule project makes use of dataweave modules which will enable more reusability and readability when writing dataweave scripts.
+version: v1
+
+/transform/jsontoxml:
+  post:
+    description: This endpoint transforms data from JSON to XML.
+    body:
+      application/json:
+        example: !include examples/request_payload.json
+    responses:
+      200:
+        body:
+          application/xml:

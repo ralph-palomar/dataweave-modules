@@ -6,7 +6,7 @@ import * from modules::translations::SweetTranslations
 fun mapSweets(p) = p map (item) -> {
 	Sweet: {
 		Id: item.id,
-		Name: sweetNames[item.name] default 'Unknown',
+		Name: namesTranslation[item.name] default 'Unknown',
 		PPU: item.ppu,
 		Type: item.'type',
 		Batters: {

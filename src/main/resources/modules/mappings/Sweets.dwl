@@ -3,7 +3,7 @@ import * from modules::mappings::Batters
 import * from modules::mappings::Toppings
 import * from modules::rules::SweetRules
 import * from modules::translations::SweetTranslations
-fun mapSweets(p) = p map (item) -> {
+fun mapSweets(p: Array) = p map (item) -> {
 	Sweet: {
 		Id: item.id,
 		Name: namesTranslation[item.name] default 'Unknown',
